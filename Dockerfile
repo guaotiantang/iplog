@@ -26,8 +26,14 @@ RUN apk add --no-cache python3 python3-dev py3-setuptools make g++ && \
     npm ci --prefer-offline --no-audit --silent && \
     npm cache clean --force
 
-# 复制源代码
-COPY . .
+# 复制构建必需的配置文件
+COPY tsconfig.json vite.config.ts tailwind.config.js postcss.config.js ./
+COPY index.html ./
+
+# 复制源代码目录
+COPY src ./src
+COPY public ./public
+COPY api ./api
 
 # 构建前端应用
 RUN npm run build

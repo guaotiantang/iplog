@@ -55,38 +55,3 @@ logs
 # 其他
 .nyc_output
 coverage
-
-# Docker 相关
-Dockerfile*
-docker-compose*
-.dockerignore
-
-# 开发工具配置
-.eslintrc*
-.prettierrc*
-tsconfig.json
-vite.config.ts
-tailwind.config.js
-postcss.config.js
-nodemon.json
-
-# 包管理器缓存
-.npm
-.yarn
-.pnpm-store
-
-# 环境文件
-.env*
-!.env.example
-
-# 源码映射
-*.map
-
-# 编辑器临时文件
-*.bak
-*.orig
-
-# 系统文件
-*.pid
-*.seed
-*.pid.lock
